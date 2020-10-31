@@ -10,4 +10,4 @@ A web application that interacts with a MongoDB database using the MERN stack we
 * Add books to a personal area (e.g. “My Books”) 
 * Only logged in users can add books to the personal area 
 * Any user can search for books and see the results.
-* Include a README.md with comprehensive installation instructions for setting up and running the project.
+* Include a README.md with comprehensive installation instructions for setting up and running the project
