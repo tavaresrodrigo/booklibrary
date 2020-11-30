@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
-const User = require('./user_model')
+const User = require('./models/user_model')
 const mongoose = require('./db')
 webServerPort = 8000
 
