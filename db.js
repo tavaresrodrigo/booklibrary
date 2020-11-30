@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose')
-const connectionString = 'mongodb://mongodb0.example.com:27017/articlerepo'
+const connectionString = 'mongodb://mongodb0.example.com:27017/BookLibrary'
 
 // Connecting to MongoDB localhost
 mongoose.connect(connectionString, {useNewUrlParser: true}, (err) => {

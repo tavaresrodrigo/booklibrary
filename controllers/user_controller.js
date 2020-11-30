@@ -100,7 +100,7 @@ exports.UpdateUser = (req, res) => {
     })
     .catch((err) => {
       return res.status(404).send({
-        message: "error while updating the post",
+        message: "Error while updating the post",
       });
     });
 };
