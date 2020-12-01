@@ -1,4 +1,3 @@
-  
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import user from '../classes/user';
@@ -6,9 +5,12 @@ import user from '../classes/user';
 export default class Navbar extends Component {
 
   constructor () {
+    super();
     this.state = {user:null}
   }
-
+  callback (bookUser) {
+    this.setState({user:bookUser})
+  }
   render() {
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">

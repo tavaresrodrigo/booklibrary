@@ -1,10 +1,29 @@
 import React, {Component } from 'react';
-
+import user from '../classes/user';
 export default class Login extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          callback: props.callback
+        }
+      }
+      submit(){
+          console.log(document.getElementById("email").value, document.getElementById("password").value)
+          const u = new user();
+          u.name = "aa"
+          u.email = "bb"
+          u.isActive = true
+          u.phone = 123
+          u.Admin = false
+          this.state.callback(u)
+      }
     render(){
         return (
             <div>
-            <p> This is where the user should login</p>
+            <p>e-mail: <input id="email" type="text" name="email" /></p>
+            <p>password: <input id="password" type="password" name="password" /></p>
+            <input type="button" value="Log-in" onClick={this.submit}/> 
             </div>
         )
     }
