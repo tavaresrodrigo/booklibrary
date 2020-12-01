@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import login from './login';
 import { Link } from 'react-router-dom';
 
 export default class Navbar extends Component {
@@ -20,7 +21,7 @@ export default class Navbar extends Component {
           <Link to="/" className="nav-link">Home</Link>
           </li>
           <li className="navbar-item">
-          <Link to="login" params={this.callback}>Login</Link>
+          <login callback={this.callback}>Login</login>
           </li>
           <li className="navbar-item">
           <Link to="/register" className="nav-link">Register</Link>
