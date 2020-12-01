@@ -1,8 +1,13 @@
   
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import user from '../classes/user';
 
 export default class Navbar extends Component {
+
+  constructor () {
+    this.state = {user:null}
+  }
 
   render() {
     return (
@@ -19,9 +24,11 @@ export default class Navbar extends Component {
           <li className="navbar-item">
           <Link to="/register" className="nav-link">Register</Link>
           </li>
-          <li className="navbar-item">
-          <Link to="/books" className="nav-link">Book List</Link>
-          </li>
+          {this.state.user ?
+           <li className="navbar-item">
+           <Link to="/books" className="nav-link">Book List</Link>
+           </li>:null
+          }
           <li className="navbar-item">
           <Link to="/my-books" className="nav-link">Your Books</Link>
           </li>
