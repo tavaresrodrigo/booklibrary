@@ -4,4 +4,5 @@ export default function user(){
         let phone;
         let image;
         let isActive;
+        let Admin;
 } 

@@ -1,16 +1,18 @@
-import React, {Component } from 'react';
-import user from '../classes/user';
+import React, {Component } from 'react'
+import user from '../classes/user'
 export default class Login extends Component {
     constructor(props) {
-        super(props);
-    
+        super(props)
+        debugger
+        this.submit = this.submit.bind(this)
+        const {callback} = props.match.params
         this.state = {
-          callback: props.callback
+          callback: callback
         }
       }
       submit(){
           console.log(document.getElementById("email").value, document.getElementById("password").value)
-          const u = new user();
+          const u = new user()
           u.name = "aa"
           u.email = "bb"
           u.isActive = true
